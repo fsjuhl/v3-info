@@ -11,7 +11,7 @@ import { useAllPoolData } from 'state/pools/hooks'
 import { PoolData } from 'state/pools/reducer'
 import DoubleCurrencyLogo from 'components/DoubleLogo'
 import HoverInlineText from 'components/HoverInlineText'
-import { feeTierPercent } from 'utils'
+import { feePercent } from 'utils'
 
 const Container = styled(StyledInternalLink)`
   min-width: 210px;
@@ -38,7 +38,7 @@ const DataCard = ({ poolData }: { poolData: PoolData }) => {
               <HoverInlineText maxCharacters={10} text={`${poolData.token0.symbol}/${poolData.token1.symbol}`} />
             </TYPE.label>
             <GreyBadge ml="10px" fontSize="12px">
-              {feeTierPercent(poolData.feeTier)}
+              {feePercent(poolData.fee)}
             </GreyBadge>
           </RowFixed>
           <RowFixed>

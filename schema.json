@@ -101,7 +101,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD",
+            "name": "maticPriceUSD",
             "description": null,
             "args": [],
             "type": {
@@ -253,7 +253,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD",
+            "name": "maticPriceUSD",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -265,7 +265,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_not",
+            "name": "maticPriceUSD_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -277,7 +277,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_gt",
+            "name": "maticPriceUSD_gt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -289,7 +289,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_lt",
+            "name": "maticPriceUSD_lt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -301,7 +301,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_gte",
+            "name": "maticPriceUSD_gte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -313,7 +313,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_lte",
+            "name": "maticPriceUSD_lte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -325,7 +325,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_in",
+            "name": "maticPriceUSD_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -345,7 +345,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD_not_in",
+            "name": "maticPriceUSD_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -385,7 +385,7 @@
             "deprecationReason": null
           },
           {
-            "name": "ethPriceUSD",
+            "name": "maticPriceUSD",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -8956,7 +8956,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier",
+            "name": "fee",
             "description": null,
             "args": [],
             "type": {
@@ -14276,7 +14276,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier",
+            "name": "fee",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14288,7 +14288,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_not",
+            "name": "fee_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14300,7 +14300,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_gt",
+            "name": "fee_gt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14312,7 +14312,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_lt",
+            "name": "fee_lt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14324,7 +14324,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_gte",
+            "name": "fee_gte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14336,7 +14336,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_lte",
+            "name": "fee_lte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -14348,7 +14348,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_in",
+            "name": "fee_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -14368,7 +14368,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier_not_in",
+            "name": "fee_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -16560,7 +16560,7 @@
             "deprecationReason": null
           },
           {
-            "name": "feeTier",
+            "name": "fee",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -18249,7 +18249,7 @@
             "deprecationReason": null
           },
           {
-            "name": "uniswapDayData",
+            "name": "algebraDayData",
             "description": null,
             "args": [
               {
@@ -18283,14 +18283,14 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "UniswapDayData",
+              "name": "algebraDayData",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "uniswapDayDatas",
+            "name": "algebraDayDatas",
             "description": null,
             "args": [
               {
@@ -18322,7 +18322,7 @@
                 "description": null,
                 "type": {
                   "kind": "ENUM",
-                  "name": "UniswapDayData_orderBy",
+                  "name": "algebraDayData_orderBy",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -18346,7 +18346,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "UniswapDayData_filter",
+                  "name": "algebraDayData_filter",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -18377,7 +18377,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "UniswapDayData",
+                    "name": "algebraDayData",
                     "ofType": null
                   }
                 }
@@ -20632,7 +20632,7 @@
             "deprecationReason": null
           },
           {
-            "name": "uniswapDayData",
+            "name": "algebraDayData",
             "description": null,
             "args": [
               {
@@ -20666,14 +20666,14 @@
             ],
             "type": {
               "kind": "OBJECT",
-              "name": "UniswapDayData",
+              "name": "algebraDayData",
               "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "uniswapDayDatas",
+            "name": "algebraDayDatas",
             "description": null,
             "args": [
               {
@@ -20705,7 +20705,7 @@
                 "description": null,
                 "type": {
                   "kind": "ENUM",
-                  "name": "UniswapDayData_orderBy",
+                  "name": "algebraDayData_orderBy",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -20729,7 +20729,7 @@
                 "description": null,
                 "type": {
                   "kind": "INPUT_OBJECT",
-                  "name": "UniswapDayData_filter",
+                  "name": "algebraDayData_filter",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -20760,7 +20760,7 @@
                   "name": null,
                   "ofType": {
                     "kind": "OBJECT",
-                    "name": "UniswapDayData",
+                    "name": "algebraDayData",
                     "ofType": null
                   }
                 }
@@ -28559,7 +28559,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH",
+            "name": "derivedMatic",
             "description": null,
             "args": [],
             "type": {
@@ -31560,7 +31560,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH",
+            "name": "derivedMatic",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31572,7 +31572,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_not",
+            "name": "derivedMatic_not",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31584,7 +31584,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_gt",
+            "name": "derivedMatic_gt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31596,7 +31596,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_lt",
+            "name": "derivedMatic_lt",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31608,7 +31608,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_gte",
+            "name": "derivedMatic_gte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31620,7 +31620,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_lte",
+            "name": "derivedMatic_lte",
             "description": null,
             "type": {
               "kind": "SCALAR",
@@ -31632,7 +31632,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_in",
+            "name": "derivedMatic_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -31652,7 +31652,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH_not_in",
+            "name": "derivedMatic_not_in",
             "description": null,
             "type": {
               "kind": "LIST",
@@ -31838,7 +31838,7 @@
             "deprecationReason": null
           },
           {
-            "name": "derivedETH",
+            "name": "derivedMatic",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32733,7 +32733,7 @@
       },
       {
         "kind": "OBJECT",
-        "name": "UniswapDayData",
+        "name": "algebraDayData",
         "description": null,
         "specifiedByUrl": null,
         "fields": [
@@ -32857,7 +32857,7 @@
       },
       {
         "kind": "INPUT_OBJECT",
-        "name": "UniswapDayData_filter",
+        "name": "algebraDayData_filter",
         "description": null,
         "specifiedByUrl": null,
         "fields": null,
@@ -33653,7 +33653,7 @@
       },
       {
         "kind": "ENUM",
-        "name": "UniswapDayData_orderBy",
+        "name": "algebraDayData_orderBy",
         "description": null,
         "specifiedByUrl": null,
         "fields": null,

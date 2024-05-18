@@ -2,7 +2,7 @@ import React, { useMemo, useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useColor } from 'hooks/useColor'
 import { ThemedBackground, PageWrapper } from 'pages/styled'
-import { ExplorerDataType, feeTierPercent, getExplorerLink, isAddress } from 'utils'
+import { ExplorerDataType, feePercent, getExplorerLink, isAddress } from 'utils'
 import { AutoColumn } from 'components/Column'
 import { RowBetween, RowFixed, AutoRow } from 'components/Row'
 import { TYPE, StyledInternalLink } from 'theme'
@@ -160,8 +160,8 @@ function PoolPage({ address }: { address: string }) {
                   <TYPE.label>{` Pools `}</TYPE.label>
                 </StyledInternalLink>
                 <TYPE.main>{` > `}</TYPE.main>
-                <TYPE.label>{` ${poolData.token0.symbol} / ${poolData.token1.symbol} ${feeTierPercent(
-                  poolData.feeTier,
+                <TYPE.label>{` ${poolData.token0.symbol} / ${poolData.token1.symbol} ${feePercent(
+                  poolData.fee,
                 )} `}</TYPE.label>
               </AutoRow>
               <RowFixed gap="10px" align="center">
@@ -180,7 +180,7 @@ function PoolPage({ address }: { address: string }) {
                     mr="8px"
                     fontSize="24px"
                   >{` ${poolData.token0.symbol} / ${poolData.token1.symbol} `}</TYPE.label>
-                  <GreyBadge>{feeTierPercent(poolData.feeTier)}</GreyBadge>
+                  <GreyBadge>{feePercent(poolData.fee)}</GreyBadge>
                   {activeNetwork === EthereumNetworkInfo ? null : (
                     <GenericImageWrapper src={activeNetwork.imageURL} style={{ marginLeft: '8px' }} size={'26px'} />
                   )}
@@ -215,7 +215,7 @@ function PoolPage({ address }: { address: string }) {
               {activeNetwork !== EthereumNetworkInfo ? null : (
                 <RowFixed>
                   <StyledExternalLink
-                    href={`https://app.uniswap.org/#/add/${poolData.token0.address}/${poolData.token1.address}/${poolData.feeTier}`}
+                    href={`https://app.uniswap.org/#/add/${poolData.token0.address}/${poolData.token1.address}/${poolData.fee}`}
                   >
                     <ButtonGray width="170px" mr="12px" style={{ height: '44px' }}>
                       <RowBetween>
@@ -273,7 +273,7 @@ function PoolPage({ address }: { address: string }) {
                   <AutoColumn $gap="4px">
                     <TYPE.main fontWeight={400}>24h Fees</TYPE.main>
                     <TYPE.label fontSize="24px">
-                      {formatDollarAmount(poolData.volumeUSD * (poolData.feeTier / 1000000))}
+                      {formatDollarAmount(poolData.volumeUSD * (poolData.fee / 1000000))}
                     </TYPE.label>
                   </AutoColumn>
                 </AutoColumn>

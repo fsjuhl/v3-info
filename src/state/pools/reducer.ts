@@ -15,14 +15,14 @@ export interface Pool {
 export interface PoolData {
   // basic token info
   address: string
-  feeTier: number
+  fee: number
 
   token0: {
     name: string
     symbol: string
     address: string
     decimals: number
-    derivedETH: number
+    derivedMatic: number
   }
 
   token1: {
@@ -30,7 +30,7 @@ export interface PoolData {
     symbol: string
     address: string
     decimals: number
-    derivedETH: number
+    derivedMatic: number
   }
 
   // for tick math

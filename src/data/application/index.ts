@@ -21,17 +21,21 @@ export const SUBGRAPH_HEALTH = gql`
   }
 `
 
-interface HealthResponse {
-  indexingStatusForCurrentVersion: {
-    chains: {
-      chainHeadBlock: {
-        number: string
+export const SUBGRAPH_BLOCK = gql`
+  query MyQuery {
+    _meta {
+      block {
+        number
       }
-      latestBlock: {
-        number: string
-      }
-    }[]
-    synced: boolean
+    }
+  }
+`
+
+interface BlockResponse {
+  _meta: {
+    block: {
+      number: number
+    }
   }
 }
 
@@ -45,7 +49,7 @@ export function useFetchedSubgraphStatus(): {
 } {
   const [activeNetwork] = useActiveNetworkVersion()
 
-  const { loading, error, data } = useQuery<HealthResponse>(SUBGRAPH_HEALTH, {
+  const { loading, error, data } = useQuery<BlockResponse>(SUBGRAPH_BLOCK, {
     client: healthClient,
     fetchPolicy: 'network-only',
     variables: {
@@ -58,7 +62,7 @@ export function useFetchedSubgraphStatus(): {
     },
   })
 
-  const parsed = data?.indexingStatusForCurrentVersion
+  const parsed = data?._meta
 
   if (loading) {
     return {
@@ -76,12 +80,12 @@ export function useFetchedSubgraphStatus(): {
     }
   }
 
-  const syncedBlock = parsed?.chains[0].latestBlock.number
-  const headBlock = parsed?.chains[0].chainHeadBlock.number
+  const syncedBlock = parsed?.block.number
+  const headBlock = parsed?.block.number
 
   return {
     available: true,
-    syncedBlock: syncedBlock ? parseFloat(syncedBlock) : undefined,
-    headBlock: headBlock ? parseFloat(headBlock) : undefined,
+    syncedBlock: syncedBlock ? syncedBlock : undefined,
+    headBlock: headBlock ? headBlock : undefined,
   }
 }

@@ -121,7 +121,7 @@ export function isTokenOnList(tokenAddressMap: TokenAddressMap, token?: Token): 
   return Boolean(token?.isToken && tokenAddressMap[token.chainId]?.[token.address])
 }
 
-export function feeTierPercent(fee: number): string {
+export function feePercent(fee: number): string {
   return (fee / 10000).toPrecision(1) + '%'
 }
 
